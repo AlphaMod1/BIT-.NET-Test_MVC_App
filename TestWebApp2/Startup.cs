@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestWebApp2.Repository;
 
 namespace TestWebApp2
 {
@@ -24,6 +25,7 @@ namespace TestWebApp2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<IFundRepository, FundRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
