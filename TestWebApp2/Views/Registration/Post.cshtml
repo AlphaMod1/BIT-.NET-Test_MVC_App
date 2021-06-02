@@ -1,0 +1,19 @@
+﻿@model RegistrationModel
+    <div class="alert alert-primary" role="alert">
+        Successfuly registered to this app
+    </div>
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Birth day</th>
+        </tr>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Email</td>
+            <td>@Model.Address</td>
+            <td>@Model.BirthDate.ToShortDateString()</td>
+        </tr>
+    </table>
+
